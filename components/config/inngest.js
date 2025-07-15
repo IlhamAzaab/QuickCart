@@ -21,7 +21,7 @@ export const syncUserCreation = inngest.createFunction(
             imageUrl:image_url
         }
         await connectDB();
-        await Usercreate(userData)
+        await User.create(userData)
     }
 );
 
@@ -42,7 +42,7 @@ export const syncUserUpdation = inngest.createFunction(
         }
         
     await connectDB()
-    await User.findbyIdAndUpdate(id,userData)
+    await User.findByIdAndUpdate(id,userData)
     }
 );
 
